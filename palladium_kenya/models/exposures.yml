@@ -1,0 +1,17 @@
+version: 2
+exposures:
+  
+  - name: ART Total
+    type: analysis
+    maturity: high
+    url:
+    description: >
+      ART visualization
+    
+    depends_on:
+      - ref('patients')
+
+    owner:
+      name: DWH team
+      email: test@test.com
+      
