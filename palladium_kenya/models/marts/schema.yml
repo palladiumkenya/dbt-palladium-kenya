@@ -1,0 +1,20 @@
+
+version: 2
+
+models:
+  - name: patients
+    description: "patients dimension table"
+    columns:
+      - name: gender
+        description: "Gender of patient"
+        tests:
+          - unique
+          - not_null
+
+  - name: patient_visits
+    description: "A table for all patients visits"
+    columns:
+      - name: sitecode
+        description: "unique identifier of a facility"
+        tests:
+          - not_null

@@ -1,0 +1,10 @@
+version: 2
+sources:
+  - name: kehmis_staging_tables
+    database: All_Staging_Transformed
+    schema: dbo
+    tables:
+      - name: stg_Patients
+        description: This table contains staging data of patients details
+      - name: stg_PatientVisits
+        description: This table contains staging data of all patient visits
