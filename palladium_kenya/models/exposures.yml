@@ -9,7 +9,7 @@ exposures:
       ART visualization
     
     depends_on:
-      - ref('patients')
+      - ref('dim_patients')
 
     owner:
       name: DWH team
