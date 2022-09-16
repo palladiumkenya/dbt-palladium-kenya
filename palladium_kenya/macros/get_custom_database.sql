@@ -1,4 +1,4 @@
-{% macro generate_database_name(custom_database_name = none, node = none) -%}
+{% macro get_custom_database(custom_database_name = none, node = none) -%}
 
     {%- set default_database = target.database -%}
 

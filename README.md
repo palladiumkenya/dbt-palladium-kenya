@@ -55,12 +55,15 @@ palladium_kenya:
 
 
     ## Commands to interact with dbt
+    
 - `dbt compile` - generates executable SQL from source
 - `dbt run` - runs all models in the models folder
 - `dbt seed` - loads csv files (typically not for large files)
 - `dbt test` - runs tests against your models and seeds
 - `dbt docs generate` - generates your project's documentation
 - `dbt docs serve` - starts a webserver on port 8000 to serve your documentation locally
+- `dbt deps` -  pulls the most recent version of the dependencies listed in your packages.yml from git
+    ### For more info on commands see here: https://docs.getdbt.com/reference/dbt-commands
 
 
 

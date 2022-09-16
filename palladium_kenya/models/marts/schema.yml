@@ -2,7 +2,7 @@
 version: 2
 
 models:
-  - name: patients
+  - name: dim_patients
     description: "patients dimension table"
     columns:
       - name: gender
@@ -11,7 +11,7 @@ models:
           - unique
           - not_null
 
-  - name: patient_visits
+  - name: fact_patient_visits
     description: "A table for all patients visits"
     columns:
       - name: sitecode
