@@ -1,15 +1,15 @@
 # dbt-palladium-kenya
-Cotains dbt models for transformations in the DWH
+Contains dbt models for transformations in the DWH
 
 ## Setting up locally
-Requirements 
+### Requirements 
 1. Make sure you have python installed: Python 3.8 and below. 
 2. For Windows preferably use Git Bash as your terminal. Download the git package here https://gitforwindows.org/ (It will include git bash)
 3. Make sure you have Microsoft Visual C++ 14.0 or greater installed. Get it with "Microsoft C++ Build Tools": https://visualstudio.microsoft.com/visual-cpp-build-tools/
 4. Make sure you have **Microsoft ODBC Driver 17 for SQL Server (x64)** installed in your machine. Download from here: https://go.microsoft.com/fwlink/?linkid=2187214
 5. Make sure the FortiCLinet VPN is connected to make a connection with the server
 
-## Steps
+### Steps
 - Clone the repo from GitHub and cd to the folder `palladium_kenya`
 - Create a python virtual environment by running: `python3.8 -m venv <name_of_environemt>` (e.g. `python3.8 -m venv venv`)
 - Activate virtual environment by running: `source venv/Scripts/activate`
@@ -26,16 +26,12 @@ Requirements
         export DBT_SERVER=<server ip address>
     ```
 
-    for `DBT_DATABASE` have a database in Test SQL Server that you will use to build your models & datasets. Ideally call it
+    for `DBT_DATABASE` have a database in the Test SQL Server that you will use to build your models & datasets. Ideally call it
     *dbt_<name_of_dev>*
 - Run `source .env` to load your environment variables.
-- Create a dbt folder that will contain the profile.yml for your local development by running:
-    `mkdir  ~/.dbt/`
-- cd to that folder by running:
-    `cd ~/.dbt/`
-- Create a file with the name `profiles.yml` and paste the following:
+- Make sure you have the config file `profiles.yml` inside the profiles folder with the following configarations:
     
- ```
+```
 palladium_kenya:
   target: dev
   outputs:
@@ -49,10 +45,6 @@ palladium_kenya:
       user:  "{{env_var('DBT_USER')}}"
       password: "{{env_var('DBT_PASSWORD')}}"
  ```
-- Run the following to check if connection works (make sure your're back in the dbt project directory `palladium_kenya`):
-
-    `dbt debug`
-
 
     ## Commands to interact with dbt
     
