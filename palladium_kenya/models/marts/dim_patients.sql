@@ -1,5 +1,5 @@
 SELECT 
-    TOP(1000)
+    top(20000)
     {{ tsql_utils.surrogate_key(['stg_Patients.PatientID', 'stg_Patients.PatientPK', 'stg_Patients.SiteCode']) }} as patient_key,
     stg_Patients.PatientID,
     stg_Patients.PatientPK,

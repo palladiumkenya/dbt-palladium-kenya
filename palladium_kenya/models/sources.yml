@@ -1,7 +1,7 @@
 version: 2
 sources:
   - name: kehmis_staging_tables
-    database: All_Staging_2016_2
+    database: All_Staging
     schema: dbo
     tables:
       - name: stg_Patients
