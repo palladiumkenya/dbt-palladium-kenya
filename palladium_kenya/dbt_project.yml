@@ -39,6 +39,7 @@ models:
       +database: PortalDev
     marts:
      +materialized: table
+     +database: PortalDev
 
 dispatch:
   - macro_namespace: dbt_utils
