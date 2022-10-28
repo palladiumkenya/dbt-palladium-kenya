@@ -1,10 +1,11 @@
-/*{{
+{{
     config(
         materialized='incremental',
-        unique_key='VisitID'
+        unique_key='VisitID',
+        incremental_strategy='merge'
     )
 }}
-*/
+
 
 select
     top(20000)
